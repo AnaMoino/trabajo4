@@ -1,0 +1,20 @@
+<div class="row" ng-show="repoCommits">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Clave sha</th>
+                <th>Committer</th>
+                <th>Mensaje del Commit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="commit  in repoCommits">
+                <div>
+                    <td>{{commit.sha}}</td>
+                    <td>{{commit.commit.committer.name}}</td>
+                    <td>{{commit.commit.message}}</td>
+                </div>
+            </tr>
+        </tbody>
+    </table>
+</div>
